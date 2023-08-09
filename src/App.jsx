@@ -3,8 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import NavBar from './components/landingPage/NavBar'
+import Home from './components/landingPage/Home'
+import Footer from './components/landingPage/Footer'
 
-const InitialContent =()=>{
+
+export const InitialContent =()=>{
   const [count, setCount] = useState(0)
 
   return (
@@ -35,14 +39,22 @@ const InitialContent =()=>{
 
 
 function App() {
+  
   return (
     <>
-      <InitialContent />
+      <NavBar />
+      {/* Routes */}
+      <Home />
+      {/* Routes end here */}
+      <Footer />
+
+
+      {/* <InitialContent />
       <OurApp />
       <OurApp />
       <OurApp />
       <OurApp />
-      <OurApp />
+      <OurApp /> */}
     </>
   )
 }
