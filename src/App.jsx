@@ -3,9 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import NavBar from './components/landingPage/NavBar'
 import Home from './components/landingPage/Home'
+import NavBar from './components/landingPage/NavBar'
 import Footer from './components/landingPage/Footer'
+import Parent from './components/Interactions/Parent'
 
 
 export const InitialContent =()=>{
@@ -43,8 +44,15 @@ function App() {
   return (
     <>
       <NavBar />
+      <section className='page-section'>
+        <Parent />
+        {/* <Parent  a={23} b={26} >
+          <OurApp />
+        </Parent> */}
+
+      </section>
       {/* Routes */}
-      <Home />
+      {/* <Home /> */}
       {/* Routes end here */}
       <Footer />
 
@@ -70,6 +78,7 @@ export function OurApp(){
       <button onClick={()=>setTest(test+1)}>{test}</button>
     </>
   )
+
 }
 
 
