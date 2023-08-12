@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 ## Step outline
 
 1. Explain files structure and purpose
-2. Explain Component and its interactions
+2. Explain Component and its  (props, reusability, conditional rendering)
 3. Form and Hooks
 4. Mapping, listing and manipulation
 5. State and Hooks
