@@ -8,6 +8,7 @@ export default function ChildTwo({item}){
           <div>Name: {item.name}</div>
           <div>Price: {item.price}</div>
           <div>Qty: {item.quantity}</div>
+          
         </div>
   </section>)
 }

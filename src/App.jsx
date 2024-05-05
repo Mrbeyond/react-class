@@ -3,10 +3,46 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import Home from './components/landingPage/Home'
-import NavBar from './components/landingPage/NavBar'
-import Footer from './components/landingPage/Footer'
-import Parent from './components/Interactions/Parent'
+// import Home from './components/landingPage/Home'
+// import NavBar from './components/landingPage/NavBar'
+// import Footer from './components/landingPage/Footer'
+// import Parent from './components/Interactions/Parent'
+import {  Routes, Route } from 'react-router'
+import PostDetails from './components/blog/PostDetails'
+import { extPosts } from './components/blog/data'
+import { LandingPosts } from './components/blog/LandingPosts'
+
+
+
+extPosts
+
+
+function App() {
+  
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<LandingPosts />} />
+        <Route path='/:id' element={<PostDetails />} />
+      </Routes>
+    </>
+  )
+}
+
+export default App
+
+
+export function OurApp(){
+  const [test, setTest] = useState(0)
+  return (
+    <>
+      <div>This is  our app in a component</div>
+      <button onClick={()=>setTest(test+1)}>{test}</button>
+    </>
+  )
+
+}
+
 
 
 export const InitialContent =()=>{
@@ -37,48 +73,3 @@ export const InitialContent =()=>{
       </>
   )
 }
-
-
-function App() {
-  
-  return (
-    <>
-      <NavBar />
-      <section className='page-section'>
-        <Parent />
-        {/* <Parent  a={23} b={26} >
-          <OurApp />
-        </Parent> */}
-
-      </section>
-      {/* Routes */}
-      {/* <Home /> */}
-      {/* Routes end here */}
-      <Footer />
-
-
-      {/* <InitialContent />
-      <OurApp />
-      <OurApp />
-      <OurApp />
-      <OurApp />
-      <OurApp /> */}
-    </>
-  )
-}
-
-export default App
-
-
-export function OurApp(){
-  const [test, setTest] = useState(0)
-  return (
-    <>
-      <div>This is  our app in a component</div>
-      <button onClick={()=>setTest(test+1)}>{test}</button>
-    </>
-  )
-
-}
-
-
